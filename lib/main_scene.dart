@@ -2,19 +2,20 @@ import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/parallax.dart';
+import 'package:flame_audio/flame_audio.dart';
 
 class MainScene extends FlameGame {
   static const _imageAssets = [
-    'DinoSprites - tard.png',
-    'AngryPig/Walk (36x30).png',
-    'Bat/Flying (46x30).png',
-    'Rino/Run (52x34).png',
-    'parallax/plx-1.png',
-    'parallax/plx-2.png',
-    'parallax/plx-3.png',
-    'parallax/plx-4.png',
-    'parallax/plx-5.png',
-    'parallax/plx-6.png',
+    'DinoSprites - tard.sprite',
+    'AngryPig/Walk (36x30).sprite',
+    'Bat/Flying (46x30).sprite',
+    'Rino/Run (52x34).sprite',
+    'parallax/plx-1.sprite',
+    'parallax/plx-2.sprite',
+    'parallax/plx-3.sprite',
+    'parallax/plx-4.sprite',
+    'parallax/plx-5.sprite',
+    'parallax/plx-6.sprite',
   ];
 
   @override
@@ -25,12 +26,12 @@ class MainScene extends FlameGame {
 
     final parallaxBackground = await loadParallaxComponent(
       [
-        ParallaxImageData('parallax/plx-1.png'),
-        ParallaxImageData('parallax/plx-2.png'),
-        ParallaxImageData('parallax/plx-3.png'),
-        ParallaxImageData('parallax/plx-4.png'),
-        ParallaxImageData('parallax/plx-5.png'),
-        ParallaxImageData('parallax/plx-6.png'),
+        ParallaxImageData('parallax/plx-1.sprite'),
+        ParallaxImageData('parallax/plx-2.sprite'),
+        ParallaxImageData('parallax/plx-3.sprite'),
+        ParallaxImageData('parallax/plx-4.sprite'),
+        ParallaxImageData('parallax/plx-5.sprite'),
+        ParallaxImageData('parallax/plx-6.sprite'),
       ],
       baseVelocity: Vector2(10, 0),
       velocityMultiplierDelta: Vector2(1.4, 0),
@@ -39,4 +40,6 @@ class MainScene extends FlameGame {
 
     return super.onLoad();
   }
+
+
 }

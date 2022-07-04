@@ -1,11 +1,9 @@
-import 'dart:async';
-
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_game/components/top_panel.dart';
 
 import 'components/main_menu.dart';
-import 'klondike_game.dart';
 import 'main_scene.dart';
 
 void main() async {
@@ -33,8 +31,9 @@ class MyApp extends StatelessWidget {
           // ),
           overlayBuilderMap: {
             MainMenu.id: (_, MainScene gameRef) => MainMenu(gameRef),
+            TopPanel.id: (_, MainScene gameRef) => TopPanel(gameRef)
           },
-          initialActiveOverlays: const [MainMenu.id],
+          initialActiveOverlays: const [TopPanel.id],
           game: MainScene(),
         ),
       ),
